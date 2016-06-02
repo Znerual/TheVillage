@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: defff9cff0a0e8a45a1069753802ce54
+timeCreated: 1464889977
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Boden
+    100004: Dach1
+    100006: Dach2
+    100008: Dachgestaenge
+    100010: DachUeberbaugestell
+    100012: Quertraeger
+    100014: Schornstein
+    100016: Seitentraeger1
+    100018: Seitentraeger2
+    100020: Tuer
+    100022: Wand
+    400000: //RootNode
+    400002: Boden
+    400004: Dach1
+    400006: Dach2
+    400008: Dachgestaenge
+    400010: DachUeberbaugestell
+    400012: Quertraeger
+    400014: Schornstein
+    400016: Seitentraeger1
+    400018: Seitentraeger2
+    400020: Tuer
+    400022: Wand
+    2300000: Boden
+    2300002: Dach1
+    2300004: Dach2
+    2300006: Dachgestaenge
+    2300008: DachUeberbaugestell
+    2300010: Quertraeger
+    2300012: Schornstein
+    2300014: Seitentraeger1
+    2300016: Seitentraeger2
+    2300018: Tuer
+    2300020: Wand
+    3300000: Boden
+    3300002: Dach1
+    3300004: Dach2
+    3300006: Dachgestaenge
+    3300008: DachUeberbaugestell
+    3300010: Quertraeger
+    3300012: Schornstein
+    3300014: Seitentraeger1
+    3300016: Seitentraeger2
+    3300018: Tuer
+    3300020: Wand
+    4300000: Tuer
+    4300002: Wand
+    4300004: Schornstein
+    4300006: DachUeberbaugestell
+    4300008: Dach2
+    4300010: Dach1
+    4300012: Boden
+    4300014: Quertraeger
+    4300016: Dachgestaenge
+    4300018: Seitentraeger2
+    4300020: Seitentraeger1
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

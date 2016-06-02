@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: 43c2686fd741cd941a9b1ce084c1b7fb
+timeCreated: 1464373143
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Boden
+    100002: Dach
+    100004: Dachgestell
+    100006: gestaenge1
+    100008: gestaenge2
+    100010: gestaenge3
+    100012: //RootNode
+    100014: MuehlenBlaetter
+    100016: muehlStein
+    100018: Querstuetzen
+    100020: tuer
+    100022: Wand
+    100024: WandGeruest
+    400000: Boden
+    400002: Dach
+    400004: Dachgestell
+    400006: gestaenge1
+    400008: gestaenge2
+    400010: gestaenge3
+    400012: //RootNode
+    400014: MuehlenBlaetter
+    400016: muehlStein
+    400018: Querstuetzen
+    400020: tuer
+    400022: Wand
+    400024: WandGeruest
+    2300000: Boden
+    2300002: Dach
+    2300004: Dachgestell
+    2300006: gestaenge1
+    2300008: gestaenge2
+    2300010: gestaenge3
+    2300012: MuehlenBlaetter
+    2300014: muehlStein
+    2300016: Querstuetzen
+    2300018: tuer
+    2300020: Wand
+    2300022: WandGeruest
+    3300000: Boden
+    3300002: Dach
+    3300004: Dachgestell
+    3300006: gestaenge1
+    3300008: gestaenge2
+    3300010: gestaenge3
+    3300012: MuehlenBlaetter
+    3300014: muehlStein
+    3300016: Querstuetzen
+    3300018: tuer
+    3300020: Wand
+    3300022: WandGeruest
+    4300000: tuer
+    4300002: Dach
+    4300004: Wand
+    4300006: MuehlenBlaetter
+    4300008: gestaenge1
+    4300010: muehlStein
+    4300012: gestaenge2
+    4300014: gestaenge3
+    4300016: Dachgestell
+    4300018: Querstuetzen
+    4300020: WandGeruest
+    4300022: Boden
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 2
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

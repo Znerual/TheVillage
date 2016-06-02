@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: abed8fcd80b37ef49addc8979037f8a7
+timeCreated: 1464707853
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Boden
+    100002: Dach
+    100004: dachsaeule
+    100006: Dachtraeger
+    100008: Dachtraeger_001
+    100010: ersterStock
+    100012: Querstuetzen
+    100014: Saelen3
+    100016: Saeulen
+    100018: Saeulen2
+    100020: //RootNode
+    100022: treppe
+    100024: Tuer
+    100026: WandOben1
+    100028: WandUnten
+    100030: Zwischenstockwand
+    400000: Boden
+    400002: Dach
+    400004: dachsaeule
+    400006: Dachtraeger
+    400008: Dachtraeger_001
+    400010: ersterStock
+    400012: Querstuetzen
+    400014: Saelen3
+    400016: Saeulen
+    400018: Saeulen2
+    400020: //RootNode
+    400022: treppe
+    400024: Tuer
+    400026: WandOben1
+    400028: WandUnten
+    400030: Zwischenstockwand
+    2300000: Boden
+    2300002: Dach
+    2300004: dachsaeule
+    2300006: Dachtraeger
+    2300008: Dachtraeger_001
+    2300010: ersterStock
+    2300012: Querstuetzen
+    2300014: Saelen3
+    2300016: Saeulen
+    2300018: Saeulen2
+    2300020: treppe
+    2300022: Tuer
+    2300024: WandOben1
+    2300026: WandUnten
+    2300028: Zwischenstockwand
+    3300000: Boden
+    3300002: Dach
+    3300004: dachsaeule
+    3300006: Dachtraeger
+    3300008: Dachtraeger_001
+    3300010: ersterStock
+    3300012: Querstuetzen
+    3300014: Saelen3
+    3300016: Saeulen
+    3300018: Saeulen2
+    3300020: treppe
+    3300022: Tuer
+    3300024: WandOben1
+    3300026: WandUnten
+    3300028: Zwischenstockwand
+    4300000: Tuer
+    4300002: WandOben1
+    4300004: WandUnten
+    4300006: Dach
+    4300008: Boden
+    4300010: Dachtraeger_001
+    4300012: Dachtraeger
+    4300014: Zwischenstockwand
+    4300016: treppe
+    4300018: Querstuetzen
+    4300020: ersterStock
+    4300022: dachsaeule
+    4300024: Saeulen
+    4300026: Saelen3
+    4300028: Saeulen2
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 2
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

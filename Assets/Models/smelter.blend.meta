@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: bbf1ca9ad9a05694688b83e4ed4e7fd1
+timeCreated: 1464716470
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Blasebalg_001
+    100002: Boden
+    100004: Dach
+    100006: DachQuerstrebe
+    100008: Querstuetzen1
+    100010: Querstuetzen2
+    100012: Schmelztrog
+    100014: Schornstein
+    100016: Schornsteinabdeckung
+    100018: Seitensteutzen
+    100020: //RootNode
+    100022: Tisch
+    100024: Tuer
+    100026: Wand
+    100028: Blasebalg
+    400000: Blasebalg_001
+    400002: Boden
+    400004: Dach
+    400006: DachQuerstrebe
+    400008: Querstuetzen1
+    400010: Querstuetzen2
+    400012: Schmelztrog
+    400014: Schornstein
+    400016: Schornsteinabdeckung
+    400018: Seitensteutzen
+    400020: //RootNode
+    400022: Tisch
+    400024: Tuer
+    400026: Wand
+    400028: Blasebalg
+    2300000: Blasebalg_001
+    2300002: Boden
+    2300004: Dach
+    2300006: DachQuerstrebe
+    2300008: Querstuetzen1
+    2300010: Querstuetzen2
+    2300012: Schmelztrog
+    2300014: Schornstein
+    2300016: Schornsteinabdeckung
+    2300018: Seitensteutzen
+    2300020: Tisch
+    2300022: Tuer
+    2300024: Wand
+    2300026: Blasebalg
+    3300000: Blasebalg_001
+    3300002: Boden
+    3300004: Dach
+    3300006: DachQuerstrebe
+    3300008: Querstuetzen1
+    3300010: Querstuetzen2
+    3300012: Schmelztrog
+    3300014: Schornstein
+    3300016: Schornsteinabdeckung
+    3300018: Seitensteutzen
+    3300020: Tisch
+    3300022: Tuer
+    3300024: Wand
+    3300026: Blasebalg
+    4300000: Blasebalg_001
+    4300002: Schornsteinabdeckung
+    4300004: Schornstein
+    4300006: Tuer
+    4300008: Boden
+    4300010: Wand
+    4300012: Dach
+    4300014: Tisch
+    4300016: Schmelztrog
+    4300018: DachQuerstrebe
+    4300020: Querstuetzen2
+    4300022: Querstuetzen1
+    4300024: Seitensteutzen
+    4300026: Blasebalg
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 2
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
