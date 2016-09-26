@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: 89235f46dac3615478fd7f62525d232f
+timeCreated: 1474204911
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: boden
+    100002: dach
+    100004: dachtraeger
+    100006: dachtraeger_001
+    100008: dachtraegerHaupt
+    100010: dachtraegerM
+    100012: dachtraegerM_001
+    100014: dachtraegerM_002
+    100016: fundament
+    100018: Plane
+    100020: Plane_001
+    100022: traeger1
+    100024: traeger2
+    100026: wand
+    100028: //RootNode
+    400000: boden
+    400002: dach
+    400004: dachtraeger
+    400006: dachtraeger_001
+    400008: dachtraegerHaupt
+    400010: dachtraegerM
+    400012: dachtraegerM_001
+    400014: dachtraegerM_002
+    400016: fundament
+    400018: Plane
+    400020: Plane_001
+    400022: traeger1
+    400024: traeger2
+    400026: wand
+    400028: //RootNode
+    2300000: boden
+    2300002: dach
+    2300004: dachtraeger
+    2300006: dachtraeger_001
+    2300008: dachtraegerHaupt
+    2300010: dachtraegerM
+    2300012: dachtraegerM_001
+    2300014: dachtraegerM_002
+    2300016: fundament
+    2300018: Plane
+    2300020: Plane_001
+    2300022: traeger1
+    2300024: traeger2
+    2300026: wand
+    3300000: boden
+    3300002: dach
+    3300004: dachtraeger
+    3300006: dachtraeger_001
+    3300008: dachtraegerHaupt
+    3300010: dachtraegerM
+    3300012: dachtraegerM_001
+    3300014: dachtraegerM_002
+    3300016: fundament
+    3300018: Plane
+    3300020: Plane_001
+    3300022: traeger1
+    3300024: traeger2
+    3300026: wand
+    4300000: Plane_001
+    4300002: wand
+    4300004: fundament
+    4300006: dach
+    4300008: dachtraeger_001
+    4300010: dachtraegerM_002
+    4300012: dachtraegerM_001
+    4300014: dachtraegerHaupt
+    4300016: dachtraegerM
+    4300018: dachtraeger
+    4300020: boden
+    4300022: traeger1
+    4300024: traeger2
+    4300026: Plane
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 3
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
