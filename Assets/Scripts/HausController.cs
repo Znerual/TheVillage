@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.UI;
 public class HausController : MonoBehaviour
 {
     
@@ -9,12 +9,30 @@ public class HausController : MonoBehaviour
     public bool isCollided = false;
     public int status; //0 = nicht initialisert, 10 = fertig gebaut
     public float BUILD_TIME = 1;
+    public int MAX_CHAR_INSIDE = 6;
+    public GameObject OptionsPanelPrefab;
     private float progress = 0f; // 0 = not bulid to 100
-    private List<GameObject> CharactersInside;
+    private float[] collectedResources = new float[4];
+    private bool buildingStopped = false;
+
+    private List<character> CharactersInside;
+    private Text CTTyp, CTProgress, CTToggleProduction, CTFood, CTWood, CTIron, CTStone, CTTipps;
+    private GameObject PanelOptions = null;
     int count = 1;
     void Start()
     {
-        CharactersInside = new List<GameObject>();
+        GameObject canvas = GameController.Instance.UI_Building;
+        CTTyp = canvas.transform.FindChild("TypBorder").GetChild(0).GetComponent<Text>();
+        CTProgress = canvas.transform.FindChild("BaufortschrittBorder").GetChild(0).GetComponent<Text>();
+        CTToggleProduction = canvas.transform.FindChild("ToggleProduction").GetChild(0).GetComponent<Text>();
+       
+        CTFood = canvas.transform.FindChild("FoodImage").GetChild(0).GetComponent<Text>();
+        CTWood = canvas.transform.FindChild("WoodImage").GetChild(0).GetComponent<Text>();
+        CTIron = canvas.transform.FindChild("IronImage").GetChild(0).GetComponent<Text>();
+        CTStone = canvas.transform.FindChild("StoneImage").GetChild(0).GetComponent<Text>();
+       
+
+        CharactersInside = new List<character>();
         Debug.Log("Script für added building hinzufügen");
         GameController.Instance.subscribeScript(this);
         gameObject.SetActive(true);
@@ -41,7 +59,11 @@ public class HausController : MonoBehaviour
     {
         Debug.Log("Placed");
         //gameObject.layer = 8;
-        GameController.Instance.subtractResources(price);
+        if (!GameController.Instance.DEBUG_FREE_BUILDING)
+        {
+            GameController.Instance.subtractResources(price);
+        }
+        
         Destroy(GetComponent<Rigidbody>());
         for (int i = 1; i < transform.childCount; i++)
         {
@@ -57,24 +79,35 @@ public class HausController : MonoBehaviour
     {
         transform.GetChild(0).gameObject.SetActive(true);
         updateUI();
+        if (status == 10)
+        {
+            updateUIOptions();
+        }
     }
     void not_selected()
     {
         transform.GetChild(0).gameObject.SetActive(false);
+        cancleOptions();
     }
+    public void stopBuilding() { buildingStopped = true; }
+    public void continueBuiding() { buildingStopped = false; }
+    public bool isBuilding() { return !buildingStopped; }
     public void building(float rate)
     {
-        if (progress + rate <= 100)
+        if (progress + rate < 100 && !buildingStopped)
         {
             progress += (rate * Time.deltaTime * 60) / BUILD_TIME;
             if (progress > (status +1) * 10)
             {
                 ++status;
             }
-        } else
+            updateUIBuilding();
+        } else if (progress + rate >= 100)
         {
             progress = 100f;
             status = 10;
+            updateUI();
+            updateUIOptions();
         }
         float rat = (float) 100 / gameObject.transform.childCount;
         
@@ -86,30 +119,92 @@ public class HausController : MonoBehaviour
         }
      
     }
-    public void MoveInside(GameObject gObj)
+    public  void collectingResources(float amount, int resource)
     {
-        gObj.SetActive(false);
-        CharactersInside.Add(gObj);
+        collectedResources[resource] += amount;
+        updateUI();
+    } 
+    
+
+    
+    public void MoveInside(character Character)
+    {
+        if (CharactersInside.Count < MAX_CHAR_INSIDE)
+        {
+            CharactersInside.Add(Character);
+            Character.getGameObject().SetActive(false);
+            
+           
+            if (GameController.Instance.selectedBuilding == gameObject)
+            {
+                GameController.Instance.updateUI_CharactersInside();
+            }
+
+
+        } else
+        {
+            Debug.Log("Building Full");
+        }
         
-        
-        Debug.Log("Moved Character inside");
     }
-    public List<GameObject> getCharactersInside()
+    public List<character> getCharactersInside()
     {
         return CharactersInside;
     }
-    public void MoveOutside(GameObject gObj)
+    public void MoveOutside(character Character)
     {
-        gObj.SetActive(true);
-        CharactersInside.Remove(gObj);
+        Character.getGameObject().SetActive(true);
+        CharactersInside.Remove(Character);
+        if (GameController.Instance.selectedBuilding == gameObject)
+        {
+            GameController.Instance.updateUI_CharactersInside();
+        }
         Debug.Log("Moved Char outside");
     }
     // Update is called once per frame
     void updateUI()
     {
-        GameObject canvas = GameController.Instance.UI_Building;
-        BuildingUI Script = canvas.GetComponent<BuildingUI>();
-        Script.selectedBuilding = gameObject;
-        //verändere das Bild und zeige status...
+        CTTyp.text = tag;
+        CTProgress.text = ((int)progress).ToString();
+        CTToggleProduction.text = "Produktion stoppen";
+        
+
+        // 0=Holz, 1=Eisen, 2=Stein, 3=Nahrung
+        CTWood.text = ((int)(collectedResources[0])).ToString();
+        CTIron.text = ((int)collectedResources[1]).ToString();
+        CTStone.text = ((int)collectedResources[2]).ToString();
+        CTFood.text = ((int)collectedResources[3]).ToString();
+        GameController.Instance.selectedBuilding = gameObject;
+        //zeige optionen
+       
+       // lösche alten eintrag und adde neues prefab.
+    }
+    void updateUIOptions()
+    {
+        if (PanelOptions == null)
+        {
+            PanelOptions = (GameObject)Instantiate(OptionsPanelPrefab, Vector3.zero, Quaternion.identity);
+            PanelOptions.transform.SetParent(GameController.Instance.UI_Building.transform.FindChild("OptionsPanel"), false);
+
+        }
+        else if (PanelOptions.name != OptionsPanelPrefab.name)
+        {
+            Destroy(PanelOptions);
+            PanelOptions = (GameObject)Instantiate(OptionsPanelPrefab, Vector3.zero, Quaternion.identity);
+            PanelOptions.transform.SetParent(GameController.Instance.UI_Building.transform.FindChild("OptionsPanel"), false);
+        }
+        GameController.Instance.UI_Building.GetComponent<UIBuiding>().optionsPanel = PanelOptions;
+    }
+    void updateUIBuilding()
+    {
+        if (GameController.Instance.selectedBuilding == gameObject)
+        {
+            CTProgress.text = ((int)progress).ToString();
+        }
+        
+    }
+    void cancleOptions()
+    {
+        Destroy(PanelOptions);
     }
 }

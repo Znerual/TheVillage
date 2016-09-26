@@ -81,11 +81,13 @@ public class CameraController : MonoBehaviour
             
                 Vector3 screenCenter = new Vector3(Screen.width / 2, 0f, Screen.height / 2);
                 Vector3 current_pos = new Vector3(Input.mousePosition.x, 0f, Input.mousePosition.y);
-                if (Vector3.Distance(screenCenter, current_pos) > MOVE_EDGE_DISTANCE && Input.mousePosition.x < Screen.width - 200 && Input.mousePosition.x > 120)
+                if (Vector3.Distance(screenCenter, current_pos) > MOVE_EDGE_DISTANCE && ((Input.mousePosition.x < Screen.width - 200) || (!GameController.Instance.UI_Building.activeSelf && !GameController.Instance.UI_Character.activeSelf)) && Input.mousePosition.x > 120)
                 {
                    
                     Vector3 direction = current_pos - screenCenter;
-                    float speed = (direction.magnitude * direction.magnitude) / 90000;
+                    direction = Quaternion.AngleAxis(curRot.y,Vector3.up) * direction;
+                    float length = direction.magnitude - 150;
+                    float speed = (length * length) / 45000;
                     targetPos = transform.position + direction.normalized * speed;
                         //move
                    
@@ -110,5 +112,11 @@ public class CameraController : MonoBehaviour
         transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetPos.x, Time.deltaTime * MOVEMENT_SPEED),
             Mathf.Lerp(transform.position.y, targetPos.y, Time.deltaTime * MOVEMENT_SPEED),
             Mathf.Lerp(transform.position.z, targetPos.z, Time.deltaTime * MOVEMENT_SPEED));
+    }
+    public void jumpToPosition(Vector3 position)
+    {
+        targetPos.x = position.x;
+        targetPos.z = position.z;
+        transform.position = targetPos;
     }
 }
