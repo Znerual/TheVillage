@@ -19,10 +19,10 @@ public class SelectCharacter : MonoBehaviour, IPointerClickHandler
             
             if (charactersInside.Exists(x => x == Character))
             {
-                UIBu.optionsPanel.transform.FindChild("NameBorder").GetChild(0).gameObject.GetComponent<Text>().text = Character.getName();
-                if (UIBu.optionsPanel.transform.FindChild("SkillSelection") != null)
+                UIBu.optionsPanel.transform.Find("NameBorder").GetChild(0).gameObject.GetComponent<Text>().text = Character.getName();
+                if (UIBu.optionsPanel.transform.Find("SkillSelection") != null)
                 {
-                    DropdownSelection dropD = UIBu.optionsPanel.transform.FindChild("SkillSelection").GetComponent<DropdownSelection>();
+                    DropdownSelection dropD = UIBu.optionsPanel.transform.Find("SkillSelection").GetComponent<DropdownSelection>();
                     dropD.changeValue(Character.getLearningSkill());
                     UIBu.progressBar.GetComponent<ProgressBar>().barDisplay = Character.m_learningProgress;
                 }

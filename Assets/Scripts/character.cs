@@ -46,7 +46,7 @@ public class character  {
     private float[] m_ColRate = { 0.1f, 0.1f, 0.1f, 0.1f };
     
 
-    private NavMeshAgent m_navMeshAgent;
+    private UnityEngine.AI.NavMeshAgent m_navMeshAgent;
 
     private STATE m_status = STATE.HEALTHY;
     private bool m_building;
@@ -55,7 +55,7 @@ public class character  {
     private GameObject m_targetObject, m_oldObject;
     private Vector3 m_oldGroundPosition, m_targetGroundPosition;
 
-    public character(GameObject character,  string name, int iq, bool male, int lifeExpectance, NavMeshAgent navMeshAgent)
+    public character(GameObject character,  string name, int iq, bool male, int lifeExpectance, UnityEngine.AI.NavMeshAgent navMeshAgent)
     {
       //  useGUILayout = false;
         m_inventory = new float[4];

@@ -22,14 +22,14 @@ public class HausController : MonoBehaviour
     void Start()
     {
         GameObject canvas = GameController.Instance.UI_Building;
-        CTTyp = canvas.transform.FindChild("TypBorder").GetChild(0).GetComponent<Text>();
-        CTProgress = canvas.transform.FindChild("BaufortschrittBorder").GetChild(0).GetComponent<Text>();
-        CTToggleProduction = canvas.transform.FindChild("ToggleProduction").GetChild(0).GetComponent<Text>();
+        CTTyp = canvas.transform.Find("TypBorder").GetChild(0).GetComponent<Text>();
+        CTProgress = canvas.transform.Find("BaufortschrittBorder").GetChild(0).GetComponent<Text>();
+        CTToggleProduction = canvas.transform.Find("ToggleProduction").GetChild(0).GetComponent<Text>();
        
-        CTFood = canvas.transform.FindChild("FoodImage").GetChild(0).GetComponent<Text>();
-        CTWood = canvas.transform.FindChild("WoodImage").GetChild(0).GetComponent<Text>();
-        CTIron = canvas.transform.FindChild("IronImage").GetChild(0).GetComponent<Text>();
-        CTStone = canvas.transform.FindChild("StoneImage").GetChild(0).GetComponent<Text>();
+        CTFood = canvas.transform.Find("FoodImage").GetChild(0).GetComponent<Text>();
+        CTWood = canvas.transform.Find("WoodImage").GetChild(0).GetComponent<Text>();
+        CTIron = canvas.transform.Find("IronImage").GetChild(0).GetComponent<Text>();
+        CTStone = canvas.transform.Find("StoneImage").GetChild(0).GetComponent<Text>();
        
 
         CharactersInside = new List<character>();
@@ -184,14 +184,14 @@ public class HausController : MonoBehaviour
         if (PanelOptions == null)
         {
             PanelOptions = (GameObject)Instantiate(OptionsPanelPrefab, Vector3.zero, Quaternion.identity);
-            PanelOptions.transform.SetParent(GameController.Instance.UI_Building.transform.FindChild("OptionsPanel"), false);
+            PanelOptions.transform.SetParent(GameController.Instance.UI_Building.transform.Find("OptionsPanel"), false);
 
         }
         else if (PanelOptions.name != OptionsPanelPrefab.name)
         {
             Destroy(PanelOptions);
             PanelOptions = (GameObject)Instantiate(OptionsPanelPrefab, Vector3.zero, Quaternion.identity);
-            PanelOptions.transform.SetParent(GameController.Instance.UI_Building.transform.FindChild("OptionsPanel"), false);
+            PanelOptions.transform.SetParent(GameController.Instance.UI_Building.transform.Find("OptionsPanel"), false);
         }
         GameController.Instance.UI_Building.GetComponent<UIBuiding>().optionsPanel = PanelOptions;
     }

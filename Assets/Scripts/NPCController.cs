@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(BoxCollider))]
 public class NPCController : MonoBehaviour
@@ -28,7 +28,7 @@ public class NPCController : MonoBehaviour
        bool male = GameController.Instance.isRandomMale();
        string CharacterName = GameController.Instance.getRandomName(male);
        int lifeExpectance = GameController.Instance.getLifeExpectance(male, IQ);
-        Character = new character(gameObject, CharacterName, IQ, male, lifeExpectance, GetComponent<NavMeshAgent>());
+        Character = new character(gameObject, CharacterName, IQ, male, lifeExpectance, GetComponent<UnityEngine.AI.NavMeshAgent>());
 
         GameObject canvas = GameController.Instance.UI_Character;
         CTName = canvas.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>();
@@ -164,7 +164,7 @@ public class NPCController : MonoBehaviour
                         break;
                    
                 }
-                if (transform.FindChild("highlight").gameObject.activeSelf)
+                if (transform.Find("highlight").gameObject.activeSelf)
                 {
                     updateUI();
                 }
@@ -193,11 +193,11 @@ public class NPCController : MonoBehaviour
     }
     void not_selected()
     {
-        transform.FindChild("highlight").gameObject.SetActive(false);
+        transform.Find("highlight").gameObject.SetActive(false);
     }
     void selected()
     {
-        transform.FindChild("highlight").gameObject.SetActive(true);
+        transform.Find("highlight").gameObject.SetActive(true);
         updateUI();
     }
     
